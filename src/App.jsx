@@ -57,17 +57,20 @@ function App() {
     }
   };
 
-  const handleFilterChange = (newFilters) => {
+  const handleFilterChange = React.useCallback((newFilters) => {
     setFilters(newFilters);
-  };
+  }, []);
 
-  const handleSort = (key) => {
-    let direction = "asc";
-    if (sortConfig.key === key && sortConfig.direction === "asc") {
-      direction = "desc";
-    }
-    setSortConfig({ key, direction });
-  };
+  const handleSort = React.useCallback(
+    (key) => {
+      let direction = "asc";
+      if (sortConfig.key === key && sortConfig.direction === "asc") {
+        direction = "desc";
+      }
+      setSortConfig({ key, direction });
+    },
+    [sortConfig]
+  );
 
   // Apply filters and sorting
   const filteredAndSortedResults = React.useMemo(() => {

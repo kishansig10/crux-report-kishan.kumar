@@ -41,7 +41,7 @@ This application allows users to analyze Chrome User Experience (CrUX) data for 
 
 4. Start the backend server:
    ```
-   node server.js
+   npm run dev
    ```
 
 ### Frontend Setup
@@ -55,7 +55,7 @@ This application allows users to analyze Chrome User Experience (CrUX) data for 
 2. Start the React development server:
 
    ```
-   npm start
+   npm run dev
    ```
 
 3. Open your browser and navigate to `http://localhost:3000`
